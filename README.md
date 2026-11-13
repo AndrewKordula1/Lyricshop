@@ -5,6 +5,8 @@ A lyrics and songwriting-structure tool, written in Rust with
 shaping a song's structure, with chord playback as a listening aid and a
 rhyme assistant built in.
 
+![Lyricshop](app.png)
+
 ## Build and run
 
 ```sh
