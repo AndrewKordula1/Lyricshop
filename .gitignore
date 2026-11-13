@@ -1,0 +1,11 @@
+# Rust build output
+/target
+
+# Editor / IDE
+.idea/
+.vscode/
+*.iml
+
+# macOS / Windows
+.DS_Store
+Thumbs.db

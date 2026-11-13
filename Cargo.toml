@@ -1,0 +1,29 @@
+[package]
+name = "lyricshop"
+version = "1.0.0"
+edition = "2021"
+description = "Lyricshop — a lyrics and songwriting-structure tool (Rust + egui port of the Song Writer App)"
+license = "GPL-3.0-or-later"
+
+[[bin]]
+name = "lyricshop"
+path = "src/main.rs"
+
+[dependencies]
+eframe = "0.32"
+egui = "0.32"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rodio = "0.21"
+rfd = "0.15"
+# PNG decoding only, to load the app icon (assets/icon.png) for the
+# window icon. No other image formats.
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+# Windows-only: embeds assets/icon.ico into the .exe (build.rs).
+# Not compiled or downloaded on other platforms.
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1"
+
+[profile.release]
+opt-level = 2
